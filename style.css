@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
+  font-family: 'Merriweather', serif;
 }
 
 /* Layout */
@@ -31,15 +36,121 @@ footer {
   clear: both;
 }
 
-header, section, aside, nav, footer {
+header,
+section,
+aside,
+nav,
+footer {
   padding: 20px;
 }
 
 /* header and footer */
 
-header, footer {
+header,
+footer {
   border-top: 5px solid #a66;
   border-bottom: 5px solid #a66;
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+/* TEXT LAYOUT */
+
+h1,
+h2 {
+  font-family: 'Aboreto', cursive;
+  letter-spacing: 0.5rem;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+section h2 + p {
+  text-indent: 2rem;
+}
+
+/* LINK LAYOUT */
+
+a:link,
+a:visited,
+a:focus,
+a:hover {
+  color: #a66;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active {
+  color: red;
+  font-weight: bold;
+}
+
+a[href^='https'] {
+  background: url(./external-link-52.png) no-repeat 100% 0;
+  background-size: 1rem;
+  padding-right: 1.5rem;
+}
+
+/* LIST LAYOUT */
+
+ul li,
+ol li {
+  line-height: 2rem;
+}
+
+ul li {
+  list-style: circle;
+}
+
+ol li {
+  list-style: lower-roman;
+}
+
+/* NAVIGATION LAYOUT */
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: flex;
+  list-style: none;
+  line-height: 3;
+  border: #a66 solid 1px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+nav ul li a:hover {
+  background-color: #a66;
+  color: white;
+}
